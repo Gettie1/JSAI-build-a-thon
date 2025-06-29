@@ -23,7 +23,6 @@ jobs:
     outputs:
       current_step: ${{ steps.get_step.outputs.current_step }}
 
-
   on_ghmodelcode:
     name: Add code review script
     needs: get_current_step
@@ -32,15 +31,13 @@ jobs:
       ${{ !github.event.repository.is_template
           && needs.get_current_step.outputs.current_step == 8 }}
 
-    # We'll run Ubuntu for performance instead of Mac or Windows.
     runs-on: ubuntu-latest
 
     steps:
-      # We'll need to check out the repository so that we can edit the README.
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Let's get all the branches.
+          fetch-depth: 0
 
       - name: Check package.json
         uses: skills/action-check-file@v1
@@ -48,7 +45,6 @@ jobs:
           file: "code-review.genai.js"
           search: "GITHUB_TOKEN"
 
-      # In README.md, switch step 2 for step 3.
       - name: Update to step 9
         uses: skills/action-update-step@v2
         with:
