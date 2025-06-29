@@ -407,3 +407,7 @@ FodyWeavers.xsd
 .env
 .azure
 packages/agent/new-agent.agent.yaml
+
+genaiscript.d.ts
+tsconfig.json
+jsconfig.json
