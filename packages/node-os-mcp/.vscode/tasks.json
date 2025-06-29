@@ -2,14 +2,14 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "npm install",
+      "label": "pnpm install",
       "type": "shell",
-      "command": "npm install"
+      "command": "pnpm install"
     },
     {
       "label": "Start MCP Server",
       "type": "shell",
-      "command": "npm run dev:sse",
+      "command": "pnpm run dev:sse",
       "isBackground": true,
       "options": {
         "cwd": "${workspaceFolder}",
@@ -32,13 +32,13 @@
           "endsPattern": "MCP Server running on|Fatal error|[nodemon] app crashed"
         }
       },
-      // remove this dependsOn if don't want to npm install each time
-      "dependsOn": [ "npm install" ]
+      // remove this dependsOn if don't want to pnpm install each time
+      "dependsOn": [ "pnpm install" ]
     },
     {
       "label": "Start MCP Inspector",
       "type": "shell",
-      "command": "npm run dev:inspector",
+      "command": "pnpm run dev:inspector",
       "isBackground": true,
       "options": {
         "cwd": "${workspaceFolder}",

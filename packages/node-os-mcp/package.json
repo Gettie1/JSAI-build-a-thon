@@ -1,7 +1,7 @@
 {
   "name": "node_os_mcp",
   "version": "0.0.1",
-  "description": "My MCP Server",
+  "description": "A Model Context Protocol server that provides operating system information tools",
   "main": "./lib/src/index.js",
   "scripts": {
     "dev:sse": "nodemon --exec node --inspect=9239 --signal SIGINT -r ts-node/register ./src/index.ts sse",

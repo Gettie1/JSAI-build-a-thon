@@ -43,13 +43,13 @@
       "name": "Launch Inspector with STDIO settings",
       "type": "node",
       "request": "launch",
-      "runtimeExecutable": "npm",
+      "runtimeExecutable": "pnpm",
       "runtimeArgs": [
         "run",
         "dev:inspector",
         "--",
-        "npm",
-        "--silent run dev:stdio"
+        "pnpm",
+        "run dev:stdio"
       ],
       "skipFiles": ["<node_internals>/**"],
       "console": "integratedTerminal",
