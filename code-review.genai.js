@@ -1,3 +1,12 @@
+// code-review.genai.js - Proper way to handle tokens
+import { env } from "node:process";
+
+// Use environment variable instead of hardcoding
+const githubToken = env.GITHUB_TOKEN;
+
+if (!githubToken) {
+  throw new Error("GITHUB_TOKEN environment variable is required");
+}
 const changes = await git.diff({ staged: true });
 
 defDiff("CODE_CHANGES", changes);
